@@ -1,0 +1,61 @@
+{
+  "expo": {
+    "name": "NLP - Signage TV",
+    "slug": "sign-android-tv",
+    "version": "1.0.0",
+    "orientation": "landscape",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#000000"
+    },
+    "android": {
+      "usesCleartextTraffic": true,
+      "package": "org.navarralanparty.signing.tv",
+      "softwareKeyboardLayoutMode": "resize",
+      "adaptiveIcon": {
+        "backgroundColor": "#1a1a1a",
+        "foregroundImage": "./assets/android-icon-foreground.png"
+      },
+      "banner": "./assets/tv-banner.png",
+      "abiFilters": ["arm64-v8a", "armeabi-v7a"],
+      "intentFilters": [
+        {
+          "action": "MAIN",
+          "category": [
+            "LAUNCHER",
+            "LEANBACK_LAUNCHER",
+            "HOME",
+            "DEFAULT"
+          ]
+        }
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "ios": {
+      "bundleIdentifier": "org.navarralanparty.signing.tv"
+    },
+    "plugins": [
+      [
+        "@react-native-tvos/config-tv",
+        {
+          "isTV": true,
+          "showBannerInLauncher": true,
+          "androidTVBanner": "./assets/tv-banner.png"
+        }
+      ],
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#1a1a1a",
+          "image": "./assets/icon.png",
+          "imageWidth": 200
+        }
+      ]
+    ]
+  }
+}
