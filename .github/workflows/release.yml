@@ -4,6 +4,9 @@ on:
   release:
     types: [published]
 
+permissions:
+  contents: write
+
 jobs:
   generate-android-apk:
     runs-on: ubuntu-24.04
@@ -47,9 +50,9 @@ jobs:
       - name: Rename APK
         run: |
           cp android/app/build/outputs/apk/release/app-release.apk \
-            "android/app/build/outputs/release/nlp-sign-android-${{ github.event.release.tag_name }}.apk"
+            "android/app/build/outputs/apk/release/nlp-sign-android-${{ github.event.release.tag_name }}.apk"
 
       - name: Attach APK to release
         uses: softprops/action-gh-release@v3
         with:
-          files: android/app/build/outputs/release/nlp-sign-android-${{ github.event.release.tag_name }}.apk
+          files: android/app/build/outputs/apk/release/nlp-sign-android-${{ github.event.release.tag_name }}.apk

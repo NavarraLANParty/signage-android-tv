@@ -12,7 +12,6 @@
       "backgroundColor": "#000000"
     },
     "android": {
-      "usesCleartextTraffic": true,
       "package": "org.navarralanparty.signing.tv",
       "softwareKeyboardLayoutMode": "resize",
       "adaptiveIcon": {
