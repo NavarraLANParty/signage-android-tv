@@ -1,4 +1,4 @@
-export const DEFAULT_SERVER_HOST: string = '192.168.1.100:8080';
+export const DEFAULT_SERVER_HOST: string = 'signage.nlp.party';
 export const STORAGE_HOST_KEY: string = '@signage_server_host';
 export const STORAGE_MAC_KEY: string = '@signage_device_mac';
 export const PING_INTERVAL_MS: number = 10000;

@@ -61,8 +61,6 @@ export default function App() {
             clicks.current = [];
             return;
         }
-
-        console.log("PRESS");
     };
 
     return (

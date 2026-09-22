@@ -4,10 +4,10 @@ import { DEFAULT_SERVER_HOST, STORAGE_HOST_KEY, STORAGE_MAC_KEY } from '../const
 
 export async function loadServerHost(): Promise<string|null> {
   try {
-    return await AsyncStorage.getItem(STORAGE_HOST_KEY);
+    const host = await AsyncStorage.getItem(STORAGE_HOST_KEY);
+    return host || DEFAULT_SERVER_HOST;
   } catch (err) {
-    console.error('Failed to load server host from storage:', err);
-    return null;
+    return DEFAULT_SERVER_HOST;
   }
 }
 
@@ -17,7 +17,6 @@ export async function saveServerHost(host: string): Promise<void> {
       await AsyncStorage.setItem(STORAGE_HOST_KEY, host.trim());
     }
   } catch (err) {
-    console.error('Failed to save server host to storage:', err);
   }
 }
 
